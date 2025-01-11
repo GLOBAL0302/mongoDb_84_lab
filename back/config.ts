@@ -1,4 +1,4 @@
 const config = {
-    db:"mongodb://localhost/todolist",
-}
+  db: 'mongodb://localhost/todolist',
+};
 export default config;

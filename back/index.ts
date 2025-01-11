@@ -5,6 +5,7 @@ import config from "./config";
 import mongoDb from "./mongoDb";
 import MongoDb from "./mongoDb";
 import usersRouter from "./routers/users";
+import tasksRouter from "./routers/tasks";
 
 const app = express();
 const port  = 8000;
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/users", usersRouter);
+app.use("/tasks", tasksRouter);
 
 
 const run = async()=>{

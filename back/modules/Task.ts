@@ -6,7 +6,7 @@ const taskSchema = new Schema({
   user:{
     type:Schema.Types.ObjectId,
     Ref:"User",
-    required:true,
+    required:[true, "User is required for task"],
   },
   title:{
     type:String,
@@ -19,6 +19,7 @@ const taskSchema = new Schema({
   status: {
     type:String,
     enum:["new","in_progress", "completed"],
+    required:[true, 'Status is required for task']
   }
 });
 
